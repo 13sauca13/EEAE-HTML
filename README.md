@@ -1,15 +1,5 @@
 # HTML-CSS-Javascript
 
-> :book:[**Libro de Javascript EEAE**](https://github.com/13sauca13/PRG/blob/master/Recursos/Javascript.pdf)
-
-<hr>
-
-:mag:[Ejercicios](https://github.com/13sauca13/PRG/tree/master/MF5.4%20HTML/Codigo)
-
-NO pueden verse en formato web desde ahí. Hay otro repositorio con GitHub Pages para visualizar los resultados:
-
-:link:[Ejercicios en vista web](https://13sauca13.github.io/E2T-HTML/)
-
 >[!IMPORTANT]
 >[HTML W3 Schools](https://www.w3schools.com/html/)
 

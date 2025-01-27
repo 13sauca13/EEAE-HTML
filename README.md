@@ -19,6 +19,29 @@ mación que contiene, además de los datos propiamente dichos, marcas o etiqueta
  El ejemplo más representativo de un lenguaje de marcas orientado a la presentación de
  información es el lenguaje de marcas de hipertexto (HyperTextMarkup Language), conocido
  como HTML
+
+'HTML
+<html>
+	<head> 
+		<title>Mi web</title>
+	</head>
+	
+	<body>
+		<h1>Esta es mi primera web</h1>
+		<h2>Trabajando en ello</h2>
+
+		<p>
+		Aqui irá el contenido de mi página web con todo su texto.
+		<br>
+		Esto va en otra línea
+		</p>
+
+		<p>
+		Y más cositas.
+		</p>
+	</body>
+</html>
+'
 ## 2. Weblogic
 ## 3. Enlaces
 ## 4. Imágen, sonido y vídeo

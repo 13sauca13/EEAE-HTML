@@ -35,6 +35,11 @@ El ejemplo más representativo de un lenguaje de marcas orientado a la presentac
 	</body>
 </html>
 ```
+
+En el ejemplo anterior nos falta introducir `<!DOCTYPE html>`, esto es una instrucción para el navegador, no una etiqueta de HTML, y aunque no es imprescindible para que la web funcione, es importante para asegurarse del correcto comportamiento puesto que de no ponerlo, el navegador, abrirá la página en *Quirks mode* (compatibilidad de navegadores antiguos) y con esta instrucción usará el *no-quirks mode* y el comportamiento será el que dictemos en el HTML y CSS de la web (veremos CSS más adelante).
+
+Como lenguaje de etiquetado, HTML utiliza **etiquetas** para su contenido con la siguiente forma:
+
 ## 2. Enlaces
 ## 3. Imágen, sonido y vídeo
 ## 4. Listas

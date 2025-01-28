@@ -39,7 +39,32 @@ El ejemplo más representativo de un lenguaje de marcas orientado a la presentac
 En el ejemplo anterior nos falta introducir `<!DOCTYPE html>`, esto es una instrucción para el navegador, no una etiqueta de HTML, y aunque no es imprescindible para que la web funcione, es importante para asegurarse del correcto comportamiento puesto que de no ponerlo, el navegador, abrirá la página en *Quirks mode* (compatibilidad de navegadores antiguos) y con esta instrucción usará el *no-quirks mode* y el comportamiento será el que dictemos en el HTML y CSS de la web (veremos CSS más adelante).
 
 Como lenguaje de etiquetado, HTML utiliza **etiquetas** para su contenido con la siguiente forma:
+```HTML
+<etiqueta> contenido </etiqueta>
+```
+Estas etiquetas no son *case sensitive*, es decir, no diferencian mayúsculas de minúsculas (es lo mismo `<body>` que `<BODY>`) pero **W3C recomienda el uso de minúsculas**, también ciertas etiquetas de HTML permiten cambiar la apariencia de los elementos pero de nuevo lo recomendado es utilizar las *hojas de estilo en cascada* **CSS**
 
+Con todo esto, la estructura básica de una página sería:
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	</body>
+</html>
+```
+- `<html>`: Esta pareja de etiquetas indica al navegador que todo lo que encierra es lenguaje HTML y nada se escribe fuera con la excepcióon de la declaración del tipo de documento.
+- `<head>`: Información de la página que no se mostrará pero que ayuda a su procesamiento.
+- `<body>`: Contiene todos los elementos que el navegador procesará y mostrará.
+
+>[!NOTE]
+>Para introducir comentarios en el código HTML lo haremos de la siguiente manera:
+>```HTML
+><!- COMENTARIO ->
+>```
+### Títulos, párrafos y saltos de línea
+Los encabezados llevarán etiquetas desde `<h1>`hasta `<h6>`(cuanto mayor sea el número más pequeño será el título)
 ## 2. Enlaces
 ## 3. Imágen, sonido y vídeo
 ## 4. Listas

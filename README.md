@@ -294,7 +294,6 @@ En este ejemplo, los estilos se aplican directamente a los elementos `<h1>` y `<
 #### 2. CSS interno
 El CSS interno se define dentro de la etiqueta `<style>` en la sección `<head>` del documento HTML. Este método es útil para aplicar estilos a una sola página y mantener los estilos separados del contenido HTML.
 
-#### Ejemplo de CSS interno:
 ```HTML
 <!DOCTYPE html>
 <html>

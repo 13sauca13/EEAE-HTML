@@ -124,6 +124,11 @@ Los enlaces son una parte fundamental de HTML, ya que permiten la navegación en
 ```
 Se puede añadir el atributo `title` en donde irá el texto del menú contextual que se ve al pasar con el ratón por encima del enlace aunque se recomienda por convención no añadir aquí información que no esté ya en el texto de la web o el nombre del enlace.
 
+En el href hay más cosas que URLs que se pueden poner:
+- `href="mailto:xxxxx"`: Lanza el programa de correo electrónico y empieza un nuevo mail a la dirección introducida.
+- `href="tel:xxxxxxxxx"`: Marca el múmero de teléfono introducido.
+- `href="fp:xxxxx"`: Conecta por FTP con el servidor introducido.
+- 
 ### Enlaces en la misma página
 Es posible hacer un enlace a otro punto de la propia página utilizando en href el valor del id de ese elemento precedido por #.
 ```html
@@ -148,11 +153,19 @@ Es posible hacer un enlace a otro punto de la propia página utilizando en href 
 </html>
 ```
 ## 3. Imágen, sonido y vídeo
-HTML también permite la inclusión de contenido multimedia como imágenes, sonido y vídeo. Las etiquetas <img>, <audio> y <video> se utilizan para estos propósitos.
+HTML también permite la inclusión de contenido multimedia como imágenes, sonido y vídeo. Las etiquetas `<img>`, `<audio>` y `<video>` se utilizan para estos propósitos.
+### `<img>`
+Para incluir una imágen tendremos que especificar el nombre y la localización de la misma, en principio usaremos jpg (o jpeg), png y gif, pero también se pueden usar más formatos (ico, svg, apng...)
 ```HTML
 <img src="imagen.jpg" alt="Descripción de la imagen" width="500" height="300">
 ```
-En este ejemplo, la etiqueta <img> se usa para mostrar una imagen. Los atributos src y alt son obligatorios, donde src especifica la ruta de la imagen y alt proporciona una descripción alternativa para la imagen. Los atributos width y height se usan para definir el tamaño de la imagen.
+Los atributos de la etiqueta son:
+- `src`: La ruta de la imagen que queremos poner en la página.
+- `alt`: Texto alternativo para cuando no se puede mostrar la imágen o para personas con discapacidad visual.
+- `width`: Ancho de la imágen en pixeles.
+- `height`: Altura de la imágen en pixeles.
+
+La altura y anchura de la imágen tambien puede ser definida usando CSS (preferible).
 ## 4. Listas
 En HTML, las listas son una forma de organizar y presentar información en un formato estructurado. Existen tres tipos principales de listas:
 

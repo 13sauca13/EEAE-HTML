@@ -70,9 +70,11 @@ Las etiquetas también pueden tener atributos como se mencionó anteriormente, y
 - `align="alineacion"`: Modifica la alineación de un texto
 - `bgcolor="color"`: Modifica el color de fondo (nombre del color o hexadecimal)
 - `color="color"`: Modifica el color del texto (nombre del color o hexadecimal)
-- id="identificador": Asigna un identificador único a un elemento, lo que permite referenciarlo fácilmente desde CSS o JavaScript.
-- class="nombreClase": Asigna una o más clases a un elemento, lo que permite aplicar estilos CSS específicos a grupos de elementos.
-- style="propiedadesCSS": Permite aplicar estilos CSS directamente a un elemento, aunque es preferible usar hojas de estilo externas para mantener el código limpio y separado (veremos CSS más adelante).
+- `id="identificador"`: Asigna un identificador único a un elemento, lo que permite referenciarlo fácilmente desde CSS o JavaScript.
+- `class="nombreClase"`: Asigna una o más clases a un elemento, lo que permite aplicar estilos CSS específicos a grupos de elementos.
+- `style="propiedadesCSS"`: Permite aplicar estilos CSS directamente a un elemento, aunque es preferible usar hojas de estilo externas para mantener el código limpio y separado (veremos CSS más adelante).
+
+Las líneas en blanco serán ignoradas por el navegador por no contener código de manera que para dar formato al texto tenemos saltos de línea `<br>` y lineas horizontales '<hr>`, **estas etiquetas no se cierran**. Para introducir un texto preformateado usaremos `<pre> TEXTO </pre>`, de esta manera el contenido será interpretado como texto con formato, no como HTML.
 
 ```HTML
 <!DOCTYPE html>
@@ -88,9 +90,18 @@ Las etiquetas también pueden tener atributos como se mencionó anteriormente, y
 		<p class="parrafo" bgcolor="#f0f0f0">
 			Este es otro párrafo con un fondo gris claro.
 		</p>
+		<pre>
+			Aquí irá texto con formato
+			Y se respetarán entre otras cosas los saltos de línea
+		</pre>
 	</body>
 </html>
 ```
+
+Por último existen ciertas etiquetas que indican como debe aperecer el texto que encierran:
+- `<b>`: *Bold*, texto en negrita.
+- `<i>`: *Italic*, texto en cursiva.
+- `<u>`: *Underline*, texto subrayado.
 
 ## 2. Enlaces
 ## 3. Imágen, sonido y vídeo

@@ -64,7 +64,34 @@ Con todo esto, la estructura básica de una página sería:
 ><!- COMENTARIO ->
 >```
 ### Títulos, párrafos y saltos de línea
-Los encabezados llevarán etiquetas desde `<h1>`hasta `<h6>`(cuanto mayor sea el número más pequeño será el título)
+Los encabezados llevarán etiquetas desde `<h1>`hasta `<h6>`(cuanto mayor sea el número más pequeño será el título), para los párrafos de texto usaremos la etiqueta `<p>` (esta etiqueta puede funcionar sin cierre, pero podríamos tener problemas con ciertas webs y salvo que especifiquemos lo contrario como sucede con algunas excepciones, **todas las etiquetas deben cerrarse**).
+
+Las etiquetas también pueden tener atributos como se mencionó anteriormente, y aunque en un futuro usaremos CSS para esto, vamos a usar algunas:
+- `align="alineacion"`: Modifica la alineación de un texto
+- `bgcolor="color"`: Modifica el color de fondo (nombre del color o hexadecimal)
+- `color="color"`: Modifica el color del texto (nombre del color o hexadecimal)
+- id="identificador": Asigna un identificador único a un elemento, lo que permite referenciarlo fácilmente desde CSS o JavaScript.
+- class="nombreClase": Asigna una o más clases a un elemento, lo que permite aplicar estilos CSS específicos a grupos de elementos.
+- style="propiedadesCSS": Permite aplicar estilos CSS directamente a un elemento, aunque es preferible usar hojas de estilo externas para mantener el código limpio y separado (veremos CSS más adelante).
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de atributos en HTML</title>
+	</head>
+	<body>
+		<h1 id="tituloPrincipal" class="titulo">Bienvenidos a mi página web</h1>
+		<p class="parrafo" color="blue" align="center">
+			Este es un párrafo con texto centrado y color azul.
+		</p>
+		<p class="parrafo" bgcolor="#f0f0f0">
+			Este es otro párrafo con un fondo gris claro.
+		</p>
+	</body>
+</html>
+```
+
 ## 2. Enlaces
 ## 3. Imágen, sonido y vídeo
 ## 4. Listas

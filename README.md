@@ -128,9 +128,9 @@ En el href hay más cosas que URLs que se pueden poner:
 - `href="mailto:xxxxx"`: Lanza el programa de correo electrónico y empieza un nuevo mail a la dirección introducida.
 - `href="tel:xxxxxxxxx"`: Marca el múmero de teléfono introducido.
 - `href="fp:xxxxx"`: Conecta por FTP con el servidor introducido.
-- 
+
 ### Enlaces en la misma página
-Es posible hacer un enlace a otro punto de la propia página utilizando en href el valor del id de ese elemento precedido por #.
+Es posible hacer un enlace a otro punto de la propia página utilizando en href el valor del id de ese elemento precedido por `#`.
 ```html
 <!DOCTYPE html>
 <html>

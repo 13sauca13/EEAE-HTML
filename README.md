@@ -74,7 +74,7 @@ Las etiquetas también pueden tener atributos como se mencionó anteriormente, y
 - `class="nombreClase"`: Asigna una o más clases a un elemento, lo que permite aplicar estilos CSS específicos a grupos de elementos.
 - `style="propiedadesCSS"`: Permite aplicar estilos CSS directamente a un elemento, aunque es preferible usar hojas de estilo externas para mantener el código limpio y separado (veremos CSS más adelante).
 
-Las líneas en blanco serán ignoradas por el navegador por no contener código de manera que para dar formato al texto tenemos saltos de línea `<br>` y lineas horizontales '<hr>`, **estas etiquetas no se cierran**. Para introducir un texto preformateado usaremos `<pre> TEXTO </pre>`, de esta manera el contenido será interpretado como texto con formato, no como HTML.
+Las líneas en blanco serán ignoradas por el navegador por no contener código de manera que para dar formato al texto tenemos saltos de línea `<br>` y lineas horizontales `<hr>`, **estas etiquetas no se cierran**. Para introducir un texto preformateado usaremos `<pre> TEXTO </pre>`, de esta manera el contenido será interpretado como texto con formato, no como HTML.
 
 ```HTML
 <!DOCTYPE html>
@@ -104,8 +104,169 @@ Por último existen ciertas etiquetas que indican como debe aperecer el texto qu
 - `<u>`: *Underline*, texto subrayado.
 
 ## 2. Enlaces
+Los enlaces son una parte fundamental de HTML, ya que permiten la navegación entre diferentes páginas web. La etiqueta <a> se utiliza para crear enlaces, y su atributo más importante es href, que especifica la URL del destino del enlace.
+```HTML
+<a href="https://www.ejemplo.com">Visita mi página de ejemplo</a>
+```
 ## 3. Imágen, sonido y vídeo
+HTML también permite la inclusión de contenido multimedia como imágenes, sonido y vídeo. Las etiquetas <img>, <audio> y <video> se utilizan para estos propósitos.
+```HTML
+<img src="imagen.jpg" alt="Descripción de la imagen" width="500" height="300">
+```
+En este ejemplo, la etiqueta <img> se usa para mostrar una imagen. Los atributos src y alt son obligatorios, donde src especifica la ruta de la imagen y alt proporciona una descripción alternativa para la imagen. Los atributos width y height se usan para definir el tamaño de la imagen.
 ## 4. Listas
+### Listas
+
+En HTML, las listas son una forma de organizar y presentar información en un formato estructurado. Existen tres tipos principales de listas:
+
+1. **Listas no ordenadas** (`<ul>`): Utilizan viñetas para enumerar los elementos.
+2. **Listas ordenadas** (`<ol>`): Utilizan números o letras para enumerar los elementos.
+3. **Listas de definición** (`<dl>`): Utilizan términos y descripciones, comúnmente usadas para glosarios o definiciones.
+
+#### Listas no ordenadas
+Las listas no ordenadas se crean utilizando la etiqueta `<ul>`, y cada elemento de la lista se define con la etiqueta `<li>`.
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de lista no ordenada</title>
+	</head>
+	<body>
+		<h2>Lista de frutas</h2>
+		<ul>
+			<li>Manzana</li>
+			<li>Banana</li>
+			<li>Cereza</li>
+		</ul>
+	</body>
+</html>
+```
+#### Listas ordenadas
+Las listas ordenadas se crean utilizando la etiqueta `<ol>`, y cada elemento de la lista se define también con la etiqueta `<li>`.
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de lista ordenada</title>
+	</head>
+	<body>
+		<h2>Pasos para hacer una receta</h2>
+		<ol>
+			<li>Precalentar el horno a 180°C.</li>
+			<li>Mezclar los ingredientes secos.</li>
+			<li>Añadir los ingredientes húmedos.</li>
+			<li>Hornear durante 30 minutos.</li>
+		</ol>
+	</body>
+</html>
+```
+#### Listas de definición
+Las listas de definición se crean utilizando la etiqueta `<dl>`, y cada término se define con la etiqueta `<dt>`, mientras que cada descripción se define con la etiqueta `<dd>`.
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de lista de definición</title>
+	</head>
+	<body>
+		<h2>Glosario de términos</h2>
+		<dl>
+			<dt>HTML</dt>
+			<dd>Lenguaje de marcado para crear páginas web.</dd>
+			<dt>CSS</dt>
+			<dd>Lenguaje de estilos para diseñar páginas web.</dd>
+			<dt>JavaScript</dt>
+			<dd>Lenguaje de programación para añadir interactividad a las páginas web.</dd>
+		</dl>
+	</body>
+</html>
+```
 ## 5. Tablas
+### Tablas
+
+Las tablas en HTML se utilizan para organizar datos en filas y columnas, proporcionando una estructura clara y fácil de leer. La etiqueta principal para crear una tabla es `<table>`, y dentro de ella se utilizan varias etiquetas para definir las diferentes partes de la tabla.
+
+#### Estructura básica de una tabla
+- `<table>`: Define el inicio y el final de la tabla.
+- `<tr>` (table row): Define una fila de la tabla.
+- `<th>` (table header): Define una celda de encabezado, que generalmente se muestra en negrita.
+- `<td>` (table data): Define una celda de datos.
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de tabla</title>
+	</head>
+	<body>
+		<h2>Tabla de ejemplo</h2>
+		<table border="1">
+			<tr>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Ciudad</th>
+			</tr>
+			<tr>
+				<td>Ana</td>
+				<td>28</td>
+				<td>Madrid</td>
+			</tr>
+			<tr>
+				<td>Juan</td>
+				<td>35</td>
+				<td>Barcelona</td>
+			</tr>
+			<tr>
+				<td>María</td>
+				<td>22</td>
+				<td>Valencia</td>
+			</tr>
+		</table>
+	</body>
+</html>
+```
+
+En este ejemplo, hemos creado una tabla con tres columnas: "Nombre", "Edad" y "Ciudad". La primera fila contiene los encabezados de la tabla, definidos con la etiqueta `<th>`, y las filas siguientes contienen los datos, definidos con la etiqueta `<td>`. El atributo `border="1"` se utiliza para agregar un borde a la tabla.
+
+#### Atributos adicionales para tablas
+- `colspan="n"`: Permite que una celda se extienda a través de varias columnas.
+- `rowspan="n"`: Permite que una celda se extienda a través de varias filas.
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de colspan y rowspan</title>
+	</head>
+	<body>
+		<h2>Tabla con colspan y rowspan</h2>
+		<table border="1">
+			<tr>
+				<th>Nombre</th>
+				<th colspan="2">Información</th>
+			</tr>
+			<tr>
+				<td>Pedro</td>
+				<td>30</td>
+				<td>Sevilla</td>
+			</tr>
+			<tr>
+				<td rowspan="2">Lucía</td>
+				<td>25</td>
+				<td>Bilbao</td>
+			</tr>
+			<tr>
+				<td>Ingeniera</td>
+				<td>Madrid</td>
+			</tr>
+		</table>
+	</body>
+</html>
+```
+
+En este ejemplo, la celda de encabezado "Información" se extiende a través de dos columnas utilizando `colspan="2"`, y la celda que contiene "Lucía" se extiende a través de dos filas utilizando `rowspan="2"`.
 ## 6. Marcos y estilos
 ## 7. Formularios

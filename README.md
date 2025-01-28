@@ -365,4 +365,82 @@ En este ejemplo, los estilos definidos en `estilos.css` se aplican al documento 
 - **CSS interno**: Útil para aplicar estilos a una sola página, pero no reutilizable en múltiples páginas.
 - **CSS externo**: Mejor práctica para proyectos grandes, facilita la reutilización y el mantenimiento de estilos.
 
-## 7. Formularios
+## 7. Maquetando todo
+Existen ciertas etiquetas semánticas para estructurar una página web de manera clara y organizada, estas etiquetas ayudan a describir el propósito de su contenido, lo que mejora la accesibilidad y el SEO de la página.
+
+#### `<header>`
+
+La etiqueta `<header>` se utiliza para definir el encabezado de una página o sección. Generalmente, contiene elementos como el logotipo, el título del sitio, y el menú de navegación principal.
+
+```html
+<header>
+    <h1>Mi Sitio Web</h1>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+```
+
+#### `<nav>`
+
+La etiqueta `<nav>` se utiliza para definir una sección de navegación que contiene enlaces a otras partes del sitio web o a otras páginas.
+
+```html
+<nav>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+```
+
+#### `<section>`
+
+La etiqueta `<section>` se utiliza para definir una sección genérica de contenido. Cada `<section>` debe tener un tema específico y puede contener encabezados, párrafos, imágenes, y otros elementos.
+
+```html
+<section id="inicio">
+    <h2>Bienvenido a mi sitio web</h2>
+    <p>Este es el contenido de la sección de inicio.</p>
+</section>
+```
+
+#### `<article>`
+
+La etiqueta `<article>` se utiliza para definir un contenido independiente que puede ser distribuido o reutilizado, como un artículo de blog, una noticia, o una entrada de foro.
+
+```html
+<article>
+    <h2>Título del artículo</h2>
+    <p>Este es el contenido del artículo.</p>
+</article>
+```
+
+#### `<aside>`
+
+La etiqueta `<aside>` se utiliza para definir contenido adicional que está relacionado con el contenido principal, pero que no es parte de él. Generalmente, se utiliza para barras laterales, citas, o enlaces relacionados.
+
+```html
+<aside>
+    <h3>Enlaces relacionados</h3>
+    <ul>
+        <li><a href="#enlace1">Enlace 1</a></li>
+        <li><a href="#enlace2">Enlace 2</a></li>
+    </ul>
+</aside>
+```
+
+#### `<footer>`
+
+La etiqueta `<footer>` se utiliza para definir el pie de página de una página o sección. Generalmente, contiene información de contacto, derechos de autor, y enlaces a políticas de privacidad o términos de uso.
+
+```html
+<footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+</footer>
+```

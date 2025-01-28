@@ -2,6 +2,8 @@
 
 >[!IMPORTANT]
 >[HTML W3 Schools](https://www.w3schools.com/html/)
+>
+>[HTML Cheatsheet](https://htmlcheatsheet.com/)
 
 ## 1. Introducción HTML
 Los lenguajes de marcas existen prácticamente desde el comienzo de la informática. Cubren la necesidad de disponer de lenguajes sencillos para el intercambio de información entre distintos sistemas. Con la llegada de internet, algunos de los lenguajes de marcas se convirtieron en piedras angulares sobre las que construir la *World Wide Web*.
@@ -103,10 +105,47 @@ Por último existen ciertas etiquetas que indican como debe aperecer el texto qu
 - `<i>`: *Italic*, texto en cursiva.
 - `<u>`: *Underline*, texto subrayado.
 
+### `<div>`
+La etiqueta `<div>` es una de las etiquetas más utilizadas en HTML para agrupar y organizar contenido. Su nombre proviene de "division" (división), y se utiliza para crear contenedores que pueden contener otros elementos HTML. La etiqueta `<div>` no tiene un significado semántico específico, lo que significa que no describe el contenido que contiene. En su lugar, se utiliza principalmente para aplicar estilos y scripts a un grupo de elementos.
+
+Más adelante al ver CSS veremos como aplicar estilos a los `<div>` según su *class* o su *id*.
+
+En resumen se usa para agrupar elementos relacionados y aplicarles estilos o scripts comunes.
+```html
+<div>
+    <h2>Encabezado dentro de un div</h2>
+    <p>Este es un párrafo dentro de un div.</p>
+</div>
+```
 ## 2. Enlaces
 Los enlaces son una parte fundamental de HTML, ya que permiten la navegación entre diferentes páginas web. La etiqueta <a> se utiliza para crear enlaces, y su atributo más importante es href, que especifica la URL del destino del enlace.
 ```HTML
 <a href="https://www.ejemplo.com">Visita mi página de ejemplo</a>
+```
+Se puede añadir el atributo `title` en donde irá el texto del menú contextual que se ve al pasar con el ratón por encima del enlace aunque se recomienda por convención no añadir aquí información que no esté ya en el texto de la web o el nombre del enlace.
+
+### Enlaces en la misma página
+Es posible hacer un enlace a otro punto de la propia página utilizando en href el valor del id de ese elemento precedido por #.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enlaces Internos</title>
+</head>
+<body>
+    <h1>Índice</h1>
+    <ul>
+        <li><a href="#seccion1">Ir a la Sección 1</a></li>
+        <li><a href="#seccion2">Ir a la Sección 2</a></li>
+    </ul>
+
+    <h2 id="seccion1">Sección 1</h2>
+    <p>Contenido de la Sección 1.</p>
+
+    <h2 id="seccion2">Sección 2</h2>
+    <p>Contenido de la Sección 2.</p>
+</body>
+</html>
 ```
 ## 3. Imágen, sonido y vídeo
 HTML también permite la inclusión de contenido multimedia como imágenes, sonido y vídeo. Las etiquetas <img>, <audio> y <video> se utilizan para estos propósitos.
@@ -121,7 +160,7 @@ En HTML, las listas son una forma de organizar y presentar información en un fo
 2. **Listas ordenadas** (`<ol>`): Utilizan números o letras para enumerar los elementos.
 3. **Listas de definición** (`<dl>`): Utilizan términos y descripciones, comúnmente usadas para glosarios o definiciones.
 
-#### Listas no ordenadas
+### Listas no ordenadas
 Las listas no ordenadas se crean utilizando la etiqueta `<ul>`, y cada elemento de la lista se define con la etiqueta `<li>`.
 
 ```HTML
@@ -140,7 +179,7 @@ Las listas no ordenadas se crean utilizando la etiqueta `<ul>`, y cada elemento 
 	</body>
 </html>
 ```
-#### Listas ordenadas
+### Listas ordenadas
 Las listas ordenadas se crean utilizando la etiqueta `<ol>`, y cada elemento de la lista se define también con la etiqueta `<li>`.
 
 ```HTML
@@ -160,7 +199,7 @@ Las listas ordenadas se crean utilizando la etiqueta `<ol>`, y cada elemento de 
 	</body>
 </html>
 ```
-#### Listas de definición
+### Listas de definición
 Las listas de definición se crean utilizando la etiqueta `<dl>`, y cada término se define con la etiqueta `<dt>`, mientras que cada descripción se define con la etiqueta `<dd>`.
 
 ```HTML
@@ -185,7 +224,7 @@ Las listas de definición se crean utilizando la etiqueta `<dl>`, y cada términ
 ## 5. Tablas
 Las tablas en HTML se utilizan para organizar datos en filas y columnas, proporcionando una estructura clara y fácil de leer. La etiqueta principal para crear una tabla es `<table>`, y dentro de ella se utilizan varias etiquetas para definir las diferentes partes de la tabla.
 
-#### Estructura básica de una tabla
+### Estructura básica de una tabla
 - `<table>`: Define el inicio y el final de la tabla.
 - `<tr>` (table row): Define una fila de la tabla.
 - `<th>` (table header): Define una celda de encabezado, que generalmente se muestra en negrita.
@@ -227,7 +266,7 @@ Las tablas en HTML se utilizan para organizar datos en filas y columnas, proporc
 
 En este ejemplo, hemos creado una tabla con tres columnas: "Nombre", "Edad" y "Ciudad". La primera fila contiene los encabezados de la tabla, definidos con la etiqueta `<th>`, y las filas siguientes contienen los datos, definidos con la etiqueta `<td>`. El atributo `border="1"` se utiliza para agregar un borde a la tabla.
 
-#### Atributos adicionales para tablas
+### Atributos adicionales para tablas
 - `colspan="n"`: Permite que una celda se extienda a través de varias columnas.
 - `rowspan="n"`: Permite que una celda se extienda a través de varias filas.
 

@@ -340,7 +340,7 @@ Los marcos (`frames`) en HTML se utilizaban para dividir la ventana del navegado
 ### Estilos CSS
 CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presentación de un documento HTML. CSS permite separar el contenido de la presentación, lo que facilita el mantenimiento y la actualización del diseño de una página web.
 
-En HTML, hay tres formas principales de introducir CSS para aplicar estilos a una página web: **CSS en línea**, **CSS interno** y **CSS externo**.
+En HTML, hay tres formas principales de introducir CSS para aplicar estilos a una página web: **CSS en línea**, **CSS interno** y **CSS externo**. Al poder introducir CSS de tres maneras diferentes, podrían "pisarse" diferentes estilos, Veremos las reglas después de ver las formas de aplicar el estilo a los distintos elementos.
 
 La manera de utilizar CSS es indicando el elemento que vamos a "decorar", lo que llamamos ***selector*** (si no estamos ya en la propia etiqueta usando el atributo `style`para CSS *inline*) y luego todas las propiedades y sus valores separados por ;
 
@@ -382,6 +382,26 @@ Las principales propiedades de CSS son:
 | `text-decoration` | Añade decoraciones al texto. | `none`, `underline`, `overline`, `line-through` |
 | `opacity` | Define la opacidad de un elemento. | `0` a `1` |
 
+#### Prioridad de estilos
+Además de los tres diferentes medios para aplicar estilos, las reglas de CSS también tienen un nivel de especificidad que influye en su prioridad. La especificidad se define en función de los selectores CSS utilizados:
+- Los selectores de etiquetas tienen la menor especificidad. Por ejemplo, «p» tiene menos especificidad que «.clase» o «#id».
+- Los selectores de clase tienen una especificidad media. Por ejemplo, «.clase» tiene más especificidad que «p», pero menos que «#id».
+- Los selectores de ID tienen la mayor especificidad. Por ejemplo, «#id» tiene más especificidad que «.clase», pero menos que los estilos en línea.
+
+Cuando hay multiple reglas de estilo que aplican a un elemento, la regla de cascada de CSS decide cuál estilo se prioritario. Esta regla se basa en los siguientes principios:
+- La especificidad es el criterio más importante. Una regla más específica siempre tendrá más prioridad que una regla menos específica.
+- En caso de empate en especificidad, la última regla de estilo encontrada se aplica.
+- Los estilos en línea siempre tienen prioridad sobre los estilos internos y externos.
+
+Podemos saltarnos estas reglas haciendo uso de la regla **!important**.
+
+Usando la declaración `!important` detrás del valor de la propiedad esa, con ese valor, prevalecen sobre las demás reglas incluso aunque tengan más prioridad (salvo que tengan también `!important`)
+```CSS
+body{
+font-family: verdana !important;
+}
+```
+En este caso la fuente del `<body>`será verdana incluso aunque haya CSS en línea
 #### Media queries
 CSS también puede ajustar su comportamiento a las pantallas que utilicemos, las **media queries** son una característica de CSS3 que permiten aplicar estilos CSS específicos en función de las características del dispositivo en el que se visualiza la página web, como el ancho de la pantalla, la resolución, la orientación, entre otros. Esto es fundamental para crear diseños web responsivos que se adapten a diferentes tamaños de pantalla y dispositivos.
 

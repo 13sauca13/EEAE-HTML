@@ -343,8 +343,11 @@ CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presenta
 En HTML, hay tres formas principales de introducir CSS para aplicar estilos a una página web: **CSS en línea**, **CSS interno** y **CSS externo**.
 
 La manera de utilizar CSS es indicando el elemento que vamos a "decorar", lo que llamamos ***selector*** (si no estamos ya en la propia etiqueta usando el atributo `style`para CSS *inline*) y luego todas las propiedades y sus valores separados por ;
+
+Los comentarios en CSS se hacen entre `/* */`
 ```CSS
 h1 {color:blue; font-size:12px; text-align:center;}
+/* Y aqui un comentario*/
 ```
 Según el selector que usemos lo haremos de una forma u otra:
 - Etiquetas HTML: La etiqueta sin más, por ejemplo `p {text-align:justify;}`
@@ -358,6 +361,82 @@ h1, p, .titulos {
 	color:red;
 }
 ```
+
+Las principales propiedades de CSS son:
+| Propiedad | Descripción | Valores |
+| - | - | - |
+| `color` | Define el color del texto. | `nombre del color`, `#hex`, `rgb()`, `rgba()`, `hsl()`, `hsla()` |
+| `background-color` | Establece el color de fondo de un elemento. | `nombre del color`, `#hex`, `rgb()`, `rgba()`, `hsl()`, `hsla()` |
+| `font-size` | Define el tamaño de la fuente. | `px`, `em`, `rem`, `%`, `vw`, `vh` |
+| `margin` | Establece el espacio exterior alrededor de un elemento. | `px`, `em`, `rem`, `%`, `auto` |
+| `padding` | Define el espacio interior de un elemento. | `px`, `em`, `rem`, `%` |
+| `border` | Establece el borde de un elemento. | `width style color` (ej. `1px solid black`) |
+| `display` | Define cómo se muestra un elemento. | `block`, `inline`, `inline-block`, `flex`, `grid`, `none` |
+| `position` | Establece el método de posicionamiento de un elemento. | `static`, `relative`, `absolute`, `fixed`, `sticky` |
+| `width` | Define el ancho de un elemento. | `px`, `em`, `rem`, `%`, `vw` |
+| `height` | Define la altura de un elemento. | `px`, `em`, `rem`, `%`, `vh` |
+| `text-align` | Define la alineación del texto dentro de un elemento. | `left`, `right`, `center`, `justify` |
+| `line-height` | Establece la altura de las líneas de texto. | `normal`, `número`, `px`, `em`, `%` |
+| `font-weight` | Define el grosor de la fuente. | `normal`, `bold`, `bolder`, `lighter`, `100` a `900` |
+| `font-family` | Especifica la familia de fuentes para el texto. | `nombre de la fuente`, `serif`, `sans-serif`, `monospace`, etc. |
+| `text-decoration` | Añade decoraciones al texto. | `none`, `underline`, `overline`, `line-through` |
+| `opacity` | Define la opacidad de un elemento. | `0` a `1` |
+
+CSS también puede ajustar su comportamiento a las pantallas que utilicemos, las **media queries** son una característica de CSS3 que permiten aplicar estilos CSS específicos en función de las características del dispositivo en el que se visualiza la página web, como el ancho de la pantalla, la resolución, la orientación, entre otros. Esto es fundamental para crear diseños web responsivos que se adapten a diferentes tamaños de pantalla y dispositivos.
+
+Las media queries utilizan la regla `@media` seguida de una condición que especifica cuándo deben aplicarse los estilos.
+```css
+/* Estilos generales */
+body {
+    font-size: 16px;
+}
+
+/* Media query para pantallas con un ancho máximo de 600px */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+```
+
+En este ejemplo, el tamaño de la fuente del `body` será de 16px en pantallas más grandes, pero se reducirá a 14px en pantallas con un ancho máximo de 600px.
+
+Existen varios tipos de media queries:
+- **Ancho y alto de la pantalla**:
+   - `max-width` y `min-width`: Se utilizan para aplicar estilos en función del ancho de la pantalla.
+   - `max-height` y `min-height`: Se utilizan para aplicar estilos en función de la altura de la pantalla.
+
+   ```css
+   @media (max-width: 768px) {
+       /* Estilos para pantallas con un ancho máximo de 768px */
+   }
+   ```
+- **Resolución**:
+   - `resolution`: Se utiliza para aplicar estilos en función de la resolución del dispositivo.
+
+   ```css
+   @media (min-resolution: 300dpi) {
+       /* Estilos para dispositivos con una resolución mínima de 300dpi */
+   }
+   ```
+
+- **Orientación**:
+   - `orientation`: Se utiliza para aplicar estilos en función de la orientación del dispositivo (horizontal o vertical).
+
+   ```css
+   @media (orientation: landscape) {
+       /* Estilos para dispositivos en orientación horizontal */
+   }
+   ```
+
+- **Aspect ratio**:
+   - `aspect-ratio`: Se utiliza para aplicar estilos en función de la relación de aspecto de la pantalla.
+
+   ```css
+   @media (min-aspect-ratio: 16/9) {
+       /* Estilos para pantallas con una relación de aspecto mínima de 16:9 */
+   }
+   ```
 #### 1. CSS en línea
 El CSS en línea se aplica directamente a los elementos HTML utilizando el atributo `style`. Este método es útil para aplicar estilos rápidos y específicos a un solo elemento, pero no es recomendable para proyectos grandes debido a la dificultad de mantenimiento y la falta de separación entre contenido y presentación.
 

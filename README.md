@@ -382,6 +382,7 @@ Las principales propiedades de CSS son:
 | `text-decoration` | Añade decoraciones al texto. | `none`, `underline`, `overline`, `line-through` |
 | `opacity` | Define la opacidad de un elemento. | `0` a `1` |
 
+#### Media queries
 CSS también puede ajustar su comportamiento a las pantallas que utilicemos, las **media queries** son una característica de CSS3 que permiten aplicar estilos CSS específicos en función de las características del dispositivo en el que se visualiza la página web, como el ancho de la pantalla, la resolución, la orientación, entre otros. Esto es fundamental para crear diseños web responsivos que se adapten a diferentes tamaños de pantalla y dispositivos.
 
 Las media queries utilizan la regla `@media` seguida de una condición que especifica cuándo deben aplicarse los estilos.
@@ -437,7 +438,9 @@ Existen varios tipos de media queries:
        /* Estilos para pantallas con una relación de aspecto mínima de 16:9 */
    }
    ```
-#### 1. CSS en línea
+
+#### Incluir CSS
+##### 1. CSS en línea
 El CSS en línea se aplica directamente a los elementos HTML utilizando el atributo `style`. Este método es útil para aplicar estilos rápidos y específicos a un solo elemento, pero no es recomendable para proyectos grandes debido a la dificultad de mantenimiento y la falta de separación entre contenido y presentación.
 
 ```HTML
@@ -455,7 +458,7 @@ El CSS en línea se aplica directamente a los elementos HTML utilizando el atrib
 
 En este ejemplo, los estilos se aplican directamente a los elementos `<h1>` y `<p>` utilizando el atributo `style`.
 
-#### 2. CSS interno
+##### 2. CSS interno
 El CSS interno se define dentro de la etiqueta `<style>` en la sección `<head>` del documento HTML. Este método es útil para aplicar estilos a una sola página y mantener los estilos separados del contenido HTML.
 
 ```HTML
@@ -486,7 +489,7 @@ El CSS interno se define dentro de la etiqueta `<style>` en la sección `<head>`
 
 En este ejemplo, los estilos se definen dentro de la etiqueta `<style>` y se aplican a los elementos de la página.
 
-#### 3. CSS externo
+##### 3. CSS externo
 El CSS externo se define en un archivo separado con extensión `.css` y se enlaza al documento HTML utilizando la etiqueta `<link>`. Este método es el más recomendado para proyectos grandes, ya que permite mantener los estilos separados del contenido y facilita la reutilización y el mantenimiento de los estilos.
 
 Para utilizar CSS externo:
@@ -522,12 +525,6 @@ p {
 ```
 
 En este ejemplo, los estilos definidos en `estilos.css` se aplican al documento HTML, manteniendo el contenido y la presentación separados.
-
-### Comparación de los métodos
-- **CSS en línea**: Fácil de aplicar a elementos individuales, pero difícil de mantener y no recomendado para proyectos grandes.
-- **CSS interno**: Útil para aplicar estilos a una sola página, pero no reutilizable en múltiples páginas.
-- **CSS externo**: Mejor práctica para proyectos grandes, facilita la reutilización y el mantenimiento de estilos.
-
 ## 7. Maquetando todo
 Existen ciertas etiquetas semánticas para estructurar una página web de manera clara y organizada, estas etiquetas ayudan a describir el propósito de su contenido, lo que mejora la accesibilidad y el SEO de la página.
 

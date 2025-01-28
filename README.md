@@ -342,6 +342,15 @@ CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presenta
 
 En HTML, hay tres formas principales de introducir CSS para aplicar estilos a una página web: **CSS en línea**, **CSS interno** y **CSS externo**.
 
+La manera de utilizar CSS es indicando el elemento que vamos a "decorar", lo que llamamos ***selector*** (si no estamos ya en la propia etiqueta usando el atributo `style`para CSS *inline*) y luego todas las propiedades y sus valores separados por ;
+```CSS
+h1 {color:blue; font-size:12px; text-align:center;}
+```
+Según el selector que usemos lo haremos de una forma u otra:
+- Etiquetas HTML: La etiqueta sin más, por ejemplo `p {text-align:justify;}`
+- Id: El Id irá precedido por #, por ejemplo `#seccion3 {background-color:grey;}`
+- Class: El nombre de la clase irá precedido por . , por ejemplo `.parrafos {font-family:verdana;}`
+
 #### 1. CSS en línea
 El CSS en línea se aplica directamente a los elementos HTML utilizando el atributo `style`. Este método es útil para aplicar estilos rápidos y específicos a un solo elemento, pero no es recomendable para proyectos grandes debido a la dificultad de mantenimiento y la falta de separación entre contenido y presentación.
 

@@ -367,6 +367,9 @@ En este ejemplo, los estilos definidos en `estilos.css` se aplican al documento 
 ## 7. Maquetando todo
 Existen ciertas etiquetas semánticas para estructurar una página web de manera clara y organizada, estas etiquetas ayudan a describir el propósito de su contenido, lo que mejora la accesibilidad y el SEO de la página.
 
+![Etiquetas semánticas](https://github.com/user-attachments/assets/15f4bb25-a27d-4d29-b119-d6c58c866999)
+
+
 #### `<header>`
 
 La etiqueta `<header>` se utiliza para definir el encabezado de una página o sección. Generalmente, contiene elementos como el logotipo, el título del sitio, y el menú de navegación principal.

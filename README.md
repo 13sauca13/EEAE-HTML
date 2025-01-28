@@ -166,6 +166,23 @@ Los atributos de la etiqueta son:
 - `height`: Altura de la imágen en pixeles.
 
 La altura y anchura de la imágen tambien puede ser definida usando CSS (preferible).
+
+### `<audio>`
+Podemos introducir audio de la siguiente manera:
+```html
+<audio src="audio.mp3" controls autoplay muted loop="infinite" volume="10"></audio>
+```
+- `controls`: Muestra los controles de reproducción.
+- `autoplay`: Hace que se reproduzca automáticamente.
+- `muted`: Audio muteado (si no se pone, hace caso de el atributo `volume`).
+- `loop`: El audio se repite automáticamente (infinitas veces o X número de veces).
+- `volume`: Establece el valor de volúmen inicial.
+
+### `<video>`
+Para introducir vídeo se utiliza esta etiqueta con los mismos atributos que la de `<audio>` pero además:
+- `width`: Ancho en pixeles.
+- `height`: Alto en pixeles.
+
 ## 4. Listas
 En HTML, las listas son una forma de organizar y presentar información en un formato estructurado. Existen tres tipos principales de listas:
 

@@ -115,8 +115,6 @@ HTML también permite la inclusión de contenido multimedia como imágenes, soni
 ```
 En este ejemplo, la etiqueta <img> se usa para mostrar una imagen. Los atributos src y alt son obligatorios, donde src especifica la ruta de la imagen y alt proporciona una descripción alternativa para la imagen. Los atributos width y height se usan para definir el tamaño de la imagen.
 ## 4. Listas
-### Listas
-
 En HTML, las listas son una forma de organizar y presentar información en un formato estructurado. Existen tres tipos principales de listas:
 
 1. **Listas no ordenadas** (`<ul>`): Utilizan viñetas para enumerar los elementos.
@@ -185,8 +183,6 @@ Las listas de definición se crean utilizando la etiqueta `<dl>`, y cada términ
 </html>
 ```
 ## 5. Tablas
-### Tablas
-
 Las tablas en HTML se utilizan para organizar datos en filas y columnas, proporcionando una estructura clara y fácil de leer. La etiqueta principal para crear una tabla es `<table>`, y dentro de ella se utilizan varias etiquetas para definir las diferentes partes de la tabla.
 
 #### Estructura básica de una tabla
@@ -269,4 +265,104 @@ En este ejemplo, hemos creado una tabla con tres columnas: "Nombre", "Edad" y "C
 
 En este ejemplo, la celda de encabezado "Información" se extiende a través de dos columnas utilizando `colspan="2"`, y la celda que contiene "Lucía" se extiende a través de dos filas utilizando `rowspan="2"`.
 ## 6. Marcos y estilos
+### Marcos
+Los marcos (`frames`) en HTML se utilizaban para dividir la ventana del navegador en varias secciones, cada una de las cuales podía mostrar un documento HTML diferente. Sin embargo, el uso de marcos ha caído en desuso debido a problemas de accesibilidad, usabilidad y SEO. En su lugar, se recomienda utilizar técnicas modernas como el diseño de páginas con CSS y JavaScript.
+
+### Estilos CSS
+CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presentación de un documento HTML. CSS permite separar el contenido de la presentación, lo que facilita el mantenimiento y la actualización del diseño de una página web.
+
+En HTML, hay tres formas principales de introducir CSS para aplicar estilos a una página web: **CSS en línea**, **CSS interno** y **CSS externo**.
+
+#### 1. CSS en línea
+El CSS en línea se aplica directamente a los elementos HTML utilizando el atributo `style`. Este método es útil para aplicar estilos rápidos y específicos a un solo elemento, pero no es recomendable para proyectos grandes debido a la dificultad de mantenimiento y la falta de separación entre contenido y presentación.
+
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de CSS en línea</title>
+	</head>
+	<body>
+		<h1 style="color: blue; text-align: center;">Título con CSS en línea</h1>
+		<p style="color: red;">Párrafo con CSS en línea</p>
+	</body>
+</html>
+```
+
+En este ejemplo, los estilos se aplican directamente a los elementos `<h1>` y `<p>` utilizando el atributo `style`.
+
+#### 2. CSS interno
+El CSS interno se define dentro de la etiqueta `<style>` en la sección `<head>` del documento HTML. Este método es útil para aplicar estilos a una sola página y mantener los estilos separados del contenido HTML.
+
+#### Ejemplo de CSS interno:
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de CSS interno</title>
+		<style>
+			body {
+				background-color: #f0f0f0;
+				font-family: Arial, sans-serif;
+			}
+			h1 {
+				color: blue;
+				text-align: center;
+			}
+			p {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Título con CSS interno</h1>
+		<p>Párrafo con CSS interno</p>
+	</body>
+</html>
+```
+
+En este ejemplo, los estilos se definen dentro de la etiqueta `<style>` y se aplican a los elementos de la página.
+
+#### 3. CSS externo
+El CSS externo se define en un archivo separado con extensión `.css` y se enlaza al documento HTML utilizando la etiqueta `<link>`. Este método es el más recomendado para proyectos grandes, ya que permite mantener los estilos separados del contenido y facilita la reutilización y el mantenimiento de los estilos.
+
+Para utilizar CSS externo:
+
+1. Crear un archivo CSS llamado `estilos.css`:
+```CSS
+body {
+	background-color: #f0f0f0;
+	font-family: Arial, sans-serif;
+}
+h1 {
+	color: blue;
+	text-align: center;
+}
+p {
+	color: red;
+}
+```
+
+2. Enlazar el archivo CSS en el documento HTML:
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de CSS externo</title>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+	</head>
+	<body>
+		<h1>Título con CSS externo</h1>
+		<p>Párrafo con CSS externo</p>
+	</body>
+</html>
+```
+
+En este ejemplo, los estilos definidos en `estilos.css` se aplican al documento HTML, manteniendo el contenido y la presentación separados.
+
+### Comparación de los métodos
+- **CSS en línea**: Fácil de aplicar a elementos individuales, pero difícil de mantener y no recomendado para proyectos grandes.
+- **CSS interno**: Útil para aplicar estilos a una sola página, pero no reutilizable en múltiples páginas.
+- **CSS externo**: Mejor práctica para proyectos grandes, facilita la reutilización y el mantenimiento de estilos.
+
 ## 7. Formularios

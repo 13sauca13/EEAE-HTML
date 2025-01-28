@@ -351,6 +351,13 @@ Según el selector que usemos lo haremos de una forma u otra:
 - Id: El Id irá precedido por #, por ejemplo `#seccion3 {background-color:grey;}`
 - Class: El nombre de la clase irá precedido por . , por ejemplo `.parrafos {font-family:verdana;}`
 
+Se pueden usar varios selectores a la vez separándolos por comas:
+```CSS
+h1, p, .titulos {
+	font-size:10px;
+	color:red;
+}
+```
 #### 1. CSS en línea
 El CSS en línea se aplica directamente a los elementos HTML utilizando el atributo `style`. Este método es útil para aplicar estilos rápidos y específicos a un solo elemento, pero no es recomendable para proyectos grandes debido a la dificultad de mantenimiento y la falta de separación entre contenido y presentación.
 

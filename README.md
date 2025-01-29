@@ -458,7 +458,14 @@ Existen varios tipos de media queries:
        /* Estilos para pantallas con una relación de aspecto mínima de 16:9 */
    }
    ```
+- **Print**:
+   - `print`: Se utiliza para aplicar estilos en función de si se imprime la pantalla.
 
+   ```css
+   @media print {
+       /* Estilos para cunado se quiera imprimir la pantalla */
+   }
+   ```
 #### Incluir CSS
 ##### 1. CSS en línea
 El CSS en línea se aplica directamente a los elementos HTML utilizando el atributo `style`. Este método es útil para aplicar estilos rápidos y específicos a un solo elemento, pero no es recomendable para proyectos grandes debido a la dificultad de mantenimiento y la falta de separación entre contenido y presentación.

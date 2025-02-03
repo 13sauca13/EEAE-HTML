@@ -117,6 +117,20 @@ En resumen se usa para agrupar elementos relacionados y aplicarles estilos o scr
     <p>Este es un párrafo dentro de un div.</p>
 </div>
 ```
+
+>[!TIP]
+>Si en algún momento queremos introducir caracteres reservados en HTML tenemos que utilizar la **Entidades**. Se introducen de dos maneras:
+>```html
+>&nombre_entidad
+>```
+>o bien puede hacerse por número:
+>```html
+>&#num_entidad
+>```
+>Puede ser comillas, símbolos de HTML, una nueva lína y hasta las miniaturas del ajedrez. Esta es una lista de las entidades HTML:
+>
+>[Caracteres Entidad HTML](https://symbl.cc/en/html-entities/)
+
 ## 2. Enlaces
 Los enlaces son una parte fundamental de HTML, ya que permiten la navegación entre diferentes páginas web. La etiqueta <a> se utiliza para crear enlaces, y su atributo más importante es href, que especifica la URL del destino del enlace.
 ```HTML

@@ -382,6 +382,19 @@ Las principales propiedades de CSS son:
 | `text-decoration` | Añade decoraciones al texto. | `none`, `underline`, `overline`, `line-through` |
 | `opacity` | Define la opacidad de un elemento. | `0` a `1` |
 
+> [!IMPORTANT]
+> Una de las propiedades más importantes en CSS es la de `display` (la más importante y la más indomable...).
+>
+> La propiedad display es por defecto y según el elemento del que hablemos una de las dos siguientes:
+> - `block`: El elemento ocupa una nueva línea y TODO el ancho (ej. `<p>`, `<h1>`, `<header>`, `<footer>`...)
+> - `inline`: El elemento ocupa sólo el ancho que necesita para mostrarse y no va a una nueva línea. No tiene ni `heght`ni `width`. (ej. `<a>`, `<img>`...)
+>
+> Partiendo de estas dos, podemos modificar manualmente la forma en que los elementos se muestran utilizando también los valores:
+> - `inline-block`: Es igual que inline pero pueden tener `height`.
+> - `none`: El elemento no se mostrará (ni ocupará espacio de ningún tipo, a todos los efectos no está ahí)
+>
+> *Si quisieramos que un elemento no se mostrase pero su espacio no pudiera ser ocupado por otro tendríamos que usar otra propiedad: `visibility: hiden;`*
+> 
 #### Prioridad de estilos
 Además de los tres diferentes medios para aplicar estilos, las reglas de CSS también tienen un nivel de especificidad que influye en su prioridad. La especificidad se define en función de los selectores CSS utilizados:
 - Los selectores de etiquetas tienen la menor especificidad. Por ejemplo, «p» tiene menos especificidad que «.clase» o «#id».

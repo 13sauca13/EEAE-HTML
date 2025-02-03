@@ -397,7 +397,7 @@ Las principales propiedades de CSS son:
 >
 > Existen más valores para la propiedad `display` además de los principales, el más versátil es **flex**, que permite crear diseños flexibles.
 >
-> Hay dos "tipos" de flex:
+> Lo primero es tener en cuenta que todos los elementos deben estar en un contenedor, en un `<div`. Hay dos "tipos" de flex:
 > - `flex`: Es un flex en bloque (ocupa toda la línea)
 > - `inline-flex`:  Es un flex en línea (ocupa sólo lo necesario)
 >
@@ -405,7 +405,22 @@ Las principales propiedades de CSS son:
 > | Propiedad | Valores | Comportamiento |
 > | - | - | - |
 > | `flex-direction` | `row` | El contenido irá en forma de fila |
-> 
+> | | `column` | El contenido irá en columna |
+> | | `row-reverse` | Fila al revés |
+> | | `column-reverse` | Columna al revés |
+> | `flex-wrap` | `nowrap` | Valor por defecto, no hace nada |
+> | | `wrap` | Permite desborde de los elementos (si no caben se ajustan en otra línea) |
+> | | `wrap-reverse` | Permite desborde al revés |
+> | `justify-content` | | Alinear los elementos en el eje principal (por defecto horizontal) |
+> | | `center` | Todos los elementos irán en el centro del contenedor |
+> | | `start` | Todo irá al principio del contenedor |
+> | | `end` | Todo irá al final del contenedor |
+> | | `space-arround` | Todo el contenido se distribuirá a partes iguales por el ancho con espacio delante y detrás |
+> | | `space-between` | Todo el contenido se distribuye con espacio equidistante entre ellos (pero sin espacio antes del primero ni después del último) |
+> | `align-items` | | Alinear los elementos en el eje secundario (por defecto vertical) |
+> | | `center` | Centrado |
+> | | `baseline` | Pegado al margen superior |
+> | | `stretch` | Los estira al alto del contenedor |
 
 #### Prioridad de estilos
 Además de los tres diferentes medios para aplicar estilos, las reglas de CSS también tienen un nivel de especificidad que influye en su prioridad. La especificidad se define en función de los selectores CSS utilizados:

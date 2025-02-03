@@ -394,7 +394,19 @@ Las principales propiedades de CSS son:
 > - `none`: El elemento no se mostrará (ni ocupará espacio de ningún tipo, a todos los efectos no está ahí)
 >
 > *Si quisieramos que un elemento no se mostrase pero su espacio no pudiera ser ocupado por otro tendríamos que usar otra propiedad: `visibility: hiden;`*
+>
+> Existen más valores para la propiedad `display` además de los principales, el más versátil es **flex**, que permite crear diseños flexibles.
+>
+> Hay dos "tipos" de flex:
+> - `flex`: Es un flex en bloque (ocupa toda la línea)
+> - `inline-flex`:  Es un flex en línea (ocupa sólo lo necesario)
+>
+> Una vez establecido el valor de display en flex, tenemos más propiedades para configurar:
+> | Propiedad | Valores | Comportamiento |
+> | - | - | - |
+> | `flex-direction` | `row` | El contenido irá en forma de fila |
 > 
+
 #### Prioridad de estilos
 Además de los tres diferentes medios para aplicar estilos, las reglas de CSS también tienen un nivel de especificidad que influye en su prioridad. La especificidad se define en función de los selectores CSS utilizados:
 - Los selectores de etiquetas tienen la menor especificidad. Por ejemplo, «p» tiene menos especificidad que «.clase» o «#id».

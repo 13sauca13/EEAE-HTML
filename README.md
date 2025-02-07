@@ -5,8 +5,12 @@
 >
 >[HTML Cheatsheet](https://htmlcheatsheet.com/)
 
->[!TIP]
->[Breve guía Git](https://github.com/13sauca13/Git/blob/main/README.md)
+<details>
+	<summary>Breve guía Git</summary>
+	Para redactar código y llevar un control de cambios así como poder realizar trabajo colaborativo es útil el uso de Git. Aquí hay un enlace a una pequeña guia para iniciarse el él:
+
+ 	[Breve guía Git](https://github.com/13sauca13/Git/blob/main/README.md)
+</details>
 
 ## 1. Introducción HTML
 Los lenguajes de marcas existen prácticamente desde el comienzo de la informática. Cubren la necesidad de disponer de lenguajes sencillos para el intercambio de información entre distintos sistemas. Con la llegada de internet, algunos de los lenguajes de marcas se convirtieron en piedras angulares sobre las que construir la *World Wide Web*.

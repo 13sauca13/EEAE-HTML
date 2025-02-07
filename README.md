@@ -9,7 +9,7 @@
 	<summary>Breve guía Git (pinchar para desplegar)</summary>
 	Para redactar código y llevar un control de cambios así como poder realizar trabajo colaborativo es útil el uso de Git. Aquí hay un enlace a una pequeña guia para iniciarse el él:
 
- 	[Breve guía Git](https://github.com/13sauca13/Git/blob/main/README.md)
+ [Breve guía Git](https://github.com/13sauca13/Git/blob/main/README.md)
 </details>
 
 ## 1. Introducción HTML
